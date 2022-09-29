@@ -5,30 +5,52 @@ import "./catalog.css";
 import { Link } from "react-router-dom";
 import DirectionsRunIcon from "@mui/icons-material/DirectionsRun";
 import Carousel from "nuka-carousel/lib/carousel";
-
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const Catalog = () => {
   return (
     <Grid container spacing={2}>
       <Grid item lg={12}>
-
-      <Carousel
-  renderCenterLeftControls={({ previousDisabled, previousSlide }) => (
-    <button onClick={previousSlide} disabled={previousDisabled}>
-      <DirectionsRunIcon/>
-    </button>
-  )}
-  renderCenterRightControls={({ nextDisabled, nextSlide }) => (
-    <button onClick={nextSlide} disabled={nextDisabled}>
-      Next
-    </button>
-  )}
->
-<div className="spanImgSlider" style={{backgroundImage: `url("../assets/img/wall/wallpaper-001.jpg")`}}></div>
-<div className="spanImgSlider" style={{backgroundImage: `url("../assets/img/wall/wallpaper-002.jpg")`}}></div>
-<div className="spanImgSlider" style={{backgroundImage: `url("../assets/img/wall/wallpaper-003.jpeg")`}}></div>
-</Carousel>
-
+        <Carousel
+          renderCenterLeftControls={({ previousDisabled, previousSlide }) => (
+            <button
+              onClick={previousSlide}
+              disabled={previousDisabled}
+              style={{ backgroundColor: "transparent", border: "none" }}
+            >
+              <ArrowBackIosIcon style={{ fontSize: "50px" }} />
+            </button>
+          )}
+          renderCenterRightControls={({ nextDisabled, nextSlide }) => (
+            <button
+              onClick={nextSlide}
+              disabled={nextDisabled}
+              style={{ backgroundColor: "transparent", border: "none" }}
+            >
+              <ArrowForwardIosIcon style={{ fontSize: "50px" }} />
+            </button>
+          )}
+        >
+          <div
+            className="spanImgSlider"
+            style={{
+              backgroundImage: `url("../assets/img/wall/wallpaper-001.jpg")`,
+            }}
+          ></div>
+          <div
+            className="spanImgSlider"
+            style={{
+              backgroundImage: `url("../assets/img/wall/wallpaper-002.jpg")`,
+            }}
+          ></div>
+          <div
+            className="spanImgSlider"
+            style={{
+              backgroundImage: `url("../assets/img/wall/wallpaper-003.jpeg")`,
+            }}
+          ></div>
+        </Carousel>
       </Grid>
 
       <Grid
