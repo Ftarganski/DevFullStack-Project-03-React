@@ -57,7 +57,7 @@ const Catalog = () => {
         container
         spacing={4}
         sx={{
-          marginTop: "10px",
+          marginTop: "75px",
           paddingLeft: "32px",
           paddingRight: "32px",
           boxSizing: "border-box",
