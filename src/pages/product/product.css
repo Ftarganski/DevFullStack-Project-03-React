@@ -1,57 +1,56 @@
-.product{
+.product {
   margin-top: 32px;
   box-sizing: border-box;
-  padding: 0.
+  padding: 0;
 }
 
-.imageSide{
-
+.imageSide {
 }
 
-.imageSide > .imageSide__image .imageSide__image-item{
-  
+.imageSide > .imageSide__image .imageSide__image-item {
   height: 500px;
   background-position: center;
-  background-size:contain ; 
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
-.imageSide > .imageSide__images{
+.imageSide > .imageSide__images {
   height: 105px;
   justify-content: space-evenly;
   margin-top: 12px;
 }
 
-.imageSide>.imageSide__images>img{
+.imageSide > .imageSide__images > img {
   box-sizing: border-box;
   cursor: pointer;
 }
 
-.productItem{}
-.productItem .productItem__title{
+.productItem {
+}
+.productItem .productItem__title {
   color: #333;
   font-weight: 600;
 }
 
-.productItem .productItem__categories{
+.productItem .productItem__categories {
   margin-top: 12px;
   margin-bottom: 12px;
 }
 
-.productItem .productItem__categories > div{
+.productItem .productItem__categories > div {
   background-color: #81a9d1;
   color: #fff;
 }
 
-.productItem__quantity input{
+.productItem__quantity input {
   width: 30px;
 }
 
-.productItem .productItem__categories .productItem__categories-label{
+.productItem .productItem__categories .productItem__categories-label {
   margin-right: 6px;
 }
 
-.productItem .productItem__promo_price{
+.productItem .productItem__promo_price {
   float: left;
   margin-right: 8px;
   font-size: 20px;
@@ -61,13 +60,13 @@
   font-weight: 600;
 }
 
-.productItem .productItem__description{
+.productItem .productItem__description {
   font-weight: 300;
   margin-top: 12px;
   margin-bottom: 12px;
   text-align: justify;
 }
-.productItem .productItem__quantity{
+.productItem .productItem__quantity {
   margin-top: 12px;
   margin-bottom: 12px;
   display: block;
@@ -79,18 +78,17 @@
   margin: 0;
 }
 
-.productItem .productItem__quantity input[type=number] {
+.productItem .productItem__quantity input[type="number"] {
   -moz-appearance: textfield;
 }
 
-
-.productItem .productItem__buy{
-  background-color: #000
+.productItem .productItem__buy {
+  background-color: #000;
 }
 
-@media screen and (min-width: 1297px){
-  .product{
-      max-width: 1280px;
-      margin: 0 auto;
+@media screen and (min-width: 1297px) {
+  .product {
+    max-width: 1280px;
+    margin: 0 auto;
   }
 }

@@ -1,7 +1,6 @@
-import './App.css';
-import { lazy, Suspense, useEffect } from 'react';
+import "./App.css";
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-
 import { AppBar, IconButton, Toolbar, Typography } from "@mui/material";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LogoutIcon from "@mui/icons-material/Logout";
@@ -15,9 +14,7 @@ const Product = lazy(() => import("./pages/product/product"));
 const NotFound = lazy(() => import("./pages/not-found/not-found"));
 
 function App() {
-
-  useEffect(() => {
-  }, [])
+  useEffect(() => {}, []);
 
   return (
     <Router>
@@ -25,8 +22,7 @@ function App() {
         <Toolbar
           style={{
             justifyContent: "space-between",
-            backgroundColor:"#000"   
-            ,
+            backgroundColor: "#000",
           }}
         >
           <Typography variant="h6" component="h2">
