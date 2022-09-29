@@ -5,7 +5,7 @@
 <!--Todo: Página de Catálogos (Home?)-->
 
 <!--Todo: Página de Produto-->
-<!--Todo: Acição ao Carrinho-->
+<!--Todo: Adição ao Carrinho-->
 
 <!--Todo: Página de Carrinho-->
 <!--Todo: Remoção do Carrinho-->
