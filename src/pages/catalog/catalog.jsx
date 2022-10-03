@@ -11,8 +11,19 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 const Catalog = () => {
   return (
     <Grid container spacing={2}>
-      <Grid item lg={12}>
+      <Grid item lg={12} className="carouselGrid">
         <Carousel
+          xs={12}
+          sm={12}
+          md={12}
+          lg={12}
+          adaptiveHeight="true"
+          autoplay="true"
+          autoplayInterval="3000"
+          wrapAround="true"
+          
+
+          className="carousel"
           renderCenterLeftControls={({ previousDisabled, previousSlide }) => (
             <button
               onClick={previousSlide}
@@ -50,6 +61,24 @@ const Catalog = () => {
               backgroundImage: `url("../assets/img/wall/wallpaper-003.jpeg")`,
             }}
           ></div>
+          <div
+            className="spanImgSlider"
+            style={{
+              backgroundImage: `url("../assets/img/wall/wallpaper-004.jpg")`,
+            }}
+          ></div>
+          <div
+            className="spanImgSlider"
+            style={{
+              backgroundImage: `url("../assets/img/wall/wallpaper-005.jpg")`,
+            }}
+          ></div>
+          <div
+            className="spanImgSlider"
+            style={{
+              backgroundImage: `url("../assets/img/wall/wallpaper-006.jpg")`,
+            }}
+          ></div>
         </Carousel>
       </Grid>
 
@@ -67,7 +96,7 @@ const Catalog = () => {
           return (
             <Grid item xs={12} sm={6} md={4} lg={3} className="catalog-item">
               <span className="badge-item">
-                <p>10%</p>
+                <p>{products[id].percent}%</p>
               </span>
 
               <img src={products[id].images[0]} alt="" />

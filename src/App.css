@@ -7,7 +7,7 @@
   pointer-events: none;
 }
 
-a{
+a {
   color: #fff;
   text-decoration: none;
 }
@@ -16,6 +16,29 @@ a{
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+@media screen and (max-width: 900px) {
+  .logoBottom {
+    display: none !important;
+  }
+  .menuBottom {
+    flex-direction: row !important;
+    align-items: center;
+  }
+
+
+}
+
+.menuBottom {
+  width: 100%;
+  height: 90%;
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .App-header {

@@ -75,3 +75,21 @@ body{
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.carousel{
+  height: 80vh !important;
+}
+
+@media screen and (max-width: 600px) {
+  .carouselGrid{
+    display: none !important;
+  }
+}
+
+
+
+/* xs, extra-pequeno: 0px
+sm, pequeno: 600px
+md, medium: 900px
+lg, large: 1200px
+xl, extra-large: 1536px */

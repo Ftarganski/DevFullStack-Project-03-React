@@ -39,7 +39,7 @@ const Product = () => {
   };
 
   return (
-    <Grid container spacing={2} className="product">
+    <Grid container spacing={2} className="product" >
       <Grid item xs={12} sm={5} className="imageSide">
         <Stack className="imageSide__image">
           <div

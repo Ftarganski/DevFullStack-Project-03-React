@@ -38,7 +38,7 @@ const Cart = () => {
     <Grid
       container
       spacing={2}
-      sx={{ padding: "40px", boxSizing: "border-box" }}
+      sx={{ padding: "40px", boxSizing: "border-box"}}
     >
       <Grid item xs={12} md={6} lg={8} sx={{ padding: "20px !important" }}>
         <div
