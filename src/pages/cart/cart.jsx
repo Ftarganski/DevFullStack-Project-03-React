@@ -1,6 +1,7 @@
 import React from "react";
 import "./cart.css";
-import { productsCart } from "./productsCart";
+import { products } from "../catalog/products";
+import { calculateTotal, calculatePromo } from "../../services/calculate";
 import { Link } from "react-router-dom";
 import {
   Grid,
@@ -13,34 +14,35 @@ import {
   TextField,
 } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 
 const Cart = () => {
-  const totals = [
-    [299, null],
-    [299, 199],
-    [299, null],
-    [299, 199],
-  ];
+  const totals = Object.keys(products).map((id) => {
+    return [
+      products[id].price * products[id].quantity,
+      products[id].promo_price * products[id].quantity,
+    ];
+  });
 
-  const total = totals.reduce((previousValue, currentValue) => {
-    return currentValue[0] + previousValue;
-  }, 0);
+  const total = calculateTotal(totals);
+  const totalPromo = calculatePromo(totals);
 
-  const totalPromo = totals.reduce((previousValue, currentValue) => {
-    if (currentValue[1]) {
-      return currentValue[0] - currentValue[1] + previousValue;
-    }
-    return 0 + previousValue;
-  }, 0);
+  const discount = (total - totalPromo) * 0.1;
 
   return (
     <Grid
       container
       spacing={2}
-      sx={{ padding: "40px", boxSizing: "border-box"}}
+      sx={{ padding: "40px", boxSizing: "border-box" }}
     >
       <Grid item xs={12} md={6} lg={8} sx={{ padding: "20px !important" }}>
+        <Typography
+          variant="h4"
+          component="h4"
+          style={{ padding: "0 0 25px 50px", boxSizing: "border-box" }}
+        >
+          Carrinho de Compras
+        </Typography>
         <div
           style={{
             boxSizing: "border-box",
@@ -49,9 +51,8 @@ const Cart = () => {
             boxShadow: "4px 4px 12px -6px rgba(0,0,0,0.6)",
           }}
         >
-
-<List sx={{ width: "100%" }}>
-            {Object.keys(productsCart).map((id) => {
+          <List sx={{ width: "100%" }}>
+            {Object.keys(products).map((id) => {
               return (
                 <ListItem
                   sx={{ alignItems: "center" }}
@@ -67,12 +68,11 @@ const Cart = () => {
                   alignItems="flex-start"
                 >
                   <Stack sx={{ flexGrow: 1 }} className="stackImage">
-                                    
-                    <span >
-                    <img  src={productsCart[id].images[0]} alt=""/>
-                      
+                    <span>
+                      <img src={products[id].images[0]} alt="" />
                     </span>
                   </Stack>
+
                   <Stack sx={{ flexGrow: 2 }} direction="row">
                     <Stack
                       direction="column"
@@ -92,7 +92,7 @@ const Cart = () => {
                         component="h6"
                         variant="h6"
                       >
-                        {productsCart[id].name}
+                        {products[id].name}
                       </Typography>
                       <Typography
                         sx={{
@@ -103,7 +103,7 @@ const Cart = () => {
                         componente="p"
                         variant="p"
                       >
-                        {productsCart[id].description.substr(0, 75)}...
+                        {products[id].description.substr(0, 75)}...
                       </Typography>
                     </Stack>
                     <Stack
@@ -116,7 +116,7 @@ const Cart = () => {
                         boxSizing: "border-box",
                       }}
                     >
-                      {productsCart[id].promo_price ? (
+                      {products[id].promo_price ? (
                         <Typography
                           sx={{
                             display: "inline",
@@ -130,10 +130,10 @@ const Cart = () => {
                           component="p"
                           variant="p"
                         >
-                          {productsCart[id].promo_price.toLocaleString(
-                            "pt-BR",
-                            { style: "currency", currency: "BRL" }
-                          )}
+                          {products[id].promo_price.toLocaleString("pt-BR", {
+                            style: "currency",
+                            currency: "BRL",
+                          })}
                         </Typography>
                       ) : (
                         <span style={{ minWidth: "74px" }} />
@@ -145,17 +145,15 @@ const Cart = () => {
                           paddingLeft: "5px",
                           paddiiRight: "5px",
                           boxSizing: "border-box",
-                          textDecoration: productsCart[id].promo_price
+                          textDecoration: products[id].promo_price
                             ? "line-through"
                             : "none",
-                          fondSize: productsCart[id].promo_price
-                            ? "12px"
-                            : "14px",
+                          fondSize: products[id].promo_price ? "12px" : "14px",
                         }}
                         component="p"
                         variant="p"
                       >
-                        {productsCart[id].price.toLocaleString("pt-BR", {
+                        {products[id].price.toLocaleString("pt-BR", {
                           style: "currency",
                           currency: "BRL",
                         })}
@@ -170,18 +168,28 @@ const Cart = () => {
                         flexGrow: 1,
                       }}
                     >
-                      <TextField size="small" type="number" />
+                      <TextField
+                        size="small"
+                        type="number"
+                        value={products[id].quantity}
+                      />
                     </Stack>
                   </Stack>
                 </ListItem>
               );
             })}
           </List>
-
         </div>
       </Grid>
 
       <Grid item xs={12} md={12} lg={4} sx={{ padding: "20px!import" }}>
+        <Typography
+          variant="h4"
+          component="h4"
+          style={{ padding: "0 0 25px 50px", boxSizing: "border-box" }}
+        >
+          Resumo
+        </Typography>
         <div
           className="boxTotal"
           style={{
@@ -210,7 +218,7 @@ const Cart = () => {
             </li>
 
             <li>
-              <span>Desconto: </span>
+              <span>Promoção: </span>
               <span>
                 {totalPromo.toLocaleString("pt-BR", {
                   style: "currency",
@@ -220,7 +228,7 @@ const Cart = () => {
             </li>
 
             <li>
-              <span>Valor Final: </span>
+              <span>Subtotal: </span>
               <span>
                 {(total - totalPromo).toLocaleString("pt-BR", {
                   style: "currency",
@@ -228,10 +236,36 @@ const Cart = () => {
                 })}
               </span>
             </li>
+
+            <li style={{ borderTop: "1px solid black" }}>
+              <span>Desconto: </span>
+              <span>
+                {discount.toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                })}
+              </span>
+            </li>
+
+            <li>
+              <span>Valor Final: </span>
+              <span>
+                {(total - totalPromo - discount).toLocaleString("pt-BR", {
+                  style: "currency",
+                  currency: "BRL",
+                })}
+              </span>
+            </li>
           </ul>
+
           <Link to="/checkout">
-            <Button style={{backgroundColor:"#000"}} variant="contained" fullWidth  startIcon={<AttachMoneyIcon/>}>
-              Confirmar Pagamento
+            <Button
+              style={{ backgroundColor: "#000" }}
+              variant="contained"
+              fullWidth
+              startIcon={<AttachMoneyIcon />}
+            >
+              Ir para o Pagamento
             </Button>
           </Link>
         </div>
