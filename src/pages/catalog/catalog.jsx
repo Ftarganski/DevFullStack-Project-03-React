@@ -21,25 +21,22 @@ const Catalog = () => {
           autoplay="true"
           autoplayInterval="3000"
           wrapAround="true"
-          
-
           className="carousel"
           renderCenterLeftControls={({ previousDisabled, previousSlide }) => (
             <button
               onClick={previousSlide}
               disabled={previousDisabled}
-              style={{ backgroundColor: "transparent", border: "none" }}
-            >
-              <ArrowBackIosIcon style={{ fontSize: "50px" }} />
+              className="carousel-button">
+              <ArrowBackIosIcon className="arrow" />
             </button>
           )}
           renderCenterRightControls={({ nextDisabled, nextSlide }) => (
             <button
               onClick={nextSlide}
               disabled={nextDisabled}
-              style={{ backgroundColor: "transparent", border: "none" }}
+              className="carousel-button"
             >
-              <ArrowForwardIosIcon style={{ fontSize: "50px" }} />
+              <ArrowForwardIosIcon className="arrow" />
             </button>
           )}
         >
@@ -48,37 +45,86 @@ const Catalog = () => {
             style={{
               backgroundImage: `url("../assets/img/wall/wallpaper-001.jpg")`,
             }}
-          ></div>
+          >
+            <div>
+              <h2>Um mundo de aventuras</h2>
+              <p>
+                Ipsum lorem, Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit!
+              </p>
+            </div>
+          </div>
+
           <div
             className="spanImgSlider"
             style={{
               backgroundImage: `url("../assets/img/wall/wallpaper-002.jpg")`,
             }}
-          ></div>
+          >
+            <div>
+              <h2>Venha viver a liberdade</h2>
+              <p>
+                Ipsum lorem, Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit!
+              </p>
+            </div>
+          </div>
+
           <div
             className="spanImgSlider"
             style={{
               backgroundImage: `url("../assets/img/wall/wallpaper-003.jpeg")`,
             }}
-          ></div>
+          >
+            <div>
+              <h2>O seu esporte é pedalar</h2>
+              <p>
+                Ipsum lorem, Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit!
+              </p>
+            </div>
+          </div>
+
           <div
             className="spanImgSlider"
             style={{
               backgroundImage: `url("../assets/img/wall/wallpaper-004.jpg")`,
             }}
-          ></div>
+          >
+            <div>
+              <h2>As novidade do mundo da bike</h2>
+              <p>
+                Ipsum lorem, Lorem ipsum, dolor sit amet consectetur adipisicing
+                elit!
+              </p>
+            </div>
+          </div>
+
           <div
             className="spanImgSlider"
             style={{
               backgroundImage: `url("../assets/img/wall/wallpaper-005.jpg")`,
             }}
-          ></div>
+          ><div>
+          <h2>A aventura apenas começou</h2>
+          <p>
+            Ipsum lorem, Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit!
+          </p>
+        </div></div>
+
           <div
             className="spanImgSlider"
             style={{
               backgroundImage: `url("../assets/img/wall/wallpaper-006.jpg")`,
             }}
-          ></div>
+          ><div>
+          <h2>A sua pausa para curtir a natureza</h2>
+          <p>
+            Ipsum lorem, Lorem ipsum, dolor sit amet consectetur adipisicing
+            elit!
+          </p>
+        </div></div>
         </Carousel>
       </Grid>
 
