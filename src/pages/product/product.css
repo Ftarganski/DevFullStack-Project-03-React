@@ -12,6 +12,8 @@ body {
 }
 
 .imageSide {
+  padding: 0 0 0 40px!important;
+  box-sizing: border-box;
 }
 
 .imageSide > .imageSide__image .imageSide__image-item {
@@ -33,6 +35,8 @@ body {
 }
 
 .productItem {
+  padding: 0 40px 0 40px!important;
+  box-sizing: border-box;
 }
 .productItem .productItem__title {
   color: #333;

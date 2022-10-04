@@ -26,7 +26,7 @@ const Catalog = () => {
             <button
               onClick={previousSlide}
               disabled={previousDisabled}
-              className="carousel-button">
+              className="carousel-button-left">
               <ArrowBackIosIcon className="arrow" />
             </button>
           )}
@@ -34,7 +34,7 @@ const Catalog = () => {
             <button
               onClick={nextSlide}
               disabled={nextDisabled}
-              className="carousel-button"
+              className="carousel-button-rigth"
             >
               <ArrowForwardIosIcon className="arrow" />
             </button>

@@ -1,5 +1,5 @@
 import "./App.css";
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import {
   AppBar,
@@ -17,7 +17,7 @@ import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import Strava from "./assets/img/strava.png";
 import Logo from "./assets/img/logo-branco.png";
 import JosefinSans from "./assets/fonts/JosefinSans-Regular.ttf";
-import { createTheme } from '@mui/material/styles';
+import { createTheme } from "@mui/material/styles";
 
 const Login = lazy(() => import("./pages/login/login"));
 const Register = lazy(() => import("./pages/register/register"));
@@ -47,11 +47,8 @@ const theme = createTheme({
   },
 });
 
-
 function App() {
   useEffect(() => {}, []);
-
-  
 
   return (
     <ThemeProvider theme={theme}>
@@ -101,6 +98,7 @@ function App() {
                   <ShoppingCartIcon
                     style={{
                       color: "#fff",
+                      fontSize: "30px",
                     }}
                   />
                 </Link>
@@ -115,6 +113,7 @@ function App() {
                   <LogoutIcon
                     style={{
                       color: "#fff",
+                      fontSize: "30px",
                     }}
                   />
                 </Link>

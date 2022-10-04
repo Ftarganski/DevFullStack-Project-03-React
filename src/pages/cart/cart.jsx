@@ -49,7 +49,8 @@ const Cart = () => {
             boxShadow: "4px 4px 12px -6px rgba(0,0,0,0.6)",
           }}
         >
-          <List sx={{ width: "100%" }}>
+
+<List sx={{ width: "100%" }}>
             {Object.keys(productsCart).map((id) => {
               return (
                 <ListItem
@@ -176,6 +177,7 @@ const Cart = () => {
               );
             })}
           </List>
+
         </div>
       </Grid>
 
