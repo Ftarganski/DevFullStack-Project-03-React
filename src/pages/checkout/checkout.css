@@ -3,6 +3,14 @@
   box-sizing: border-box;
 }
 
+.boxTotal {
+  padding: 20px !important;
+  box-sizing: border-box;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 4px 4px 12px -6px rgba(0,0,0,0.6);
+}
+
 .order-detail {
   padding-top: 32px !important;
 }

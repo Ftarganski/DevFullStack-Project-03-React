@@ -25,6 +25,7 @@ const Catalog = lazy(() => import("./pages/catalog/catalog"));
 const Cart = lazy(() => import("./pages/cart/cart"));
 const Checkout = lazy(() => import("./pages/checkout/checkout"));
 const Product = lazy(() => import("./pages/product/product"));
+const About = lazy(() => import("./pages/about/about"));
 const NotFound = lazy(() => import("./pages/not-found/not-found"));
 
 const theme = createTheme({
@@ -130,6 +131,7 @@ function App() {
             <Route exact path="/register" element={<Register />} />
             <Route exact path="/cart" element={<Cart />} />
             <Route exact path="/checkout" element={<Checkout />} />
+            <Route exact path="/about" element={<About />} />
             <Route path="/product/:id" element={<Product />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

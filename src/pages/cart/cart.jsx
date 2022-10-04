@@ -33,9 +33,9 @@ const Cart = () => {
     <Grid
       container
       spacing={2}
-      sx={{ padding: "40px", boxSizing: "border-box" }}
-    >
-      <Grid item xs={12} md={6} lg={8} sx={{ padding: "20px !important" }}>
+      sx={{ padding: "40px", boxSizing: "border-box" }}>
+
+      <Grid item xs={12} md={12} lg={8} sx={{ padding: "20px!important" }}>
         <Typography
           variant="h4"
           component="h4"
@@ -44,12 +44,9 @@ const Cart = () => {
           Carrinho de Compras
         </Typography>
         <div
-          style={{
-            boxSizing: "border-box",
-            backgroundColor: "#fff",
-            borderRadius: "15px",
-            boxShadow: "4px 4px 12px -6px rgba(0,0,0,0.6)",
-          }}
+
+className="boxTotal"
+          
         >
           <List sx={{ width: "100%" }}>
             {Object.keys(products).map((id) => {
@@ -188,17 +185,11 @@ const Cart = () => {
           component="h4"
           style={{ padding: "0 0 25px 50px", boxSizing: "border-box" }}
         >
-          Resumo
+          Resumo do Pedido
         </Typography>
         <div
           className="boxTotal"
-          style={{
-            boxSizing: "border-box",
-            backgroundColor: "#fff",
-            borderRadius: "15px",
-            boxShadow: "4px 4px 12px -6px rgba(0,0,0,0.6)",
-          }}
-        >
+                  >
           <ul
             style={{
               margin: 0,

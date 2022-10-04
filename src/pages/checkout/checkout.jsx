@@ -30,14 +30,12 @@ const Checkout = () => {
   const discount = (total - totalPromo) * 0.1;
 
   return (
-    <Grid container spacing={2} className="checkout">
-      {/* <Grid item xs={12}>
-        <Typography variant="h5" component="h1">
-          Realizar pagamento
-        </Typography>
-      </Grid> */}
-
-      <Grid item xs={12} md={6} lg={8} sx={{ padding: "20px!important" }}>
+    <Grid 
+      container
+      spacing={2}
+      sx={{ padding: "40px", boxSizing: "border-box" }}>
+    
+      <Grid item xs={12} md={12} lg={8} sx={{ padding: "20px!important" }}>
         <Typography
           variant="h4"
           component="h4"
@@ -45,6 +43,9 @@ const Checkout = () => {
         >
           Informações Pessoais
         </Typography>
+        <div
+          className= "boxTotal"
+        >
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Grid container spacing={2}>
@@ -193,6 +194,10 @@ const Checkout = () => {
             </Grid>
           </Grid>
         </Grid>
+</div>
+
+
+
       </Grid>
 
       <Grid item xs={12} md={12} lg={4} sx={{ padding: "20px!import" }}>
@@ -201,8 +206,13 @@ const Checkout = () => {
           component="h4"
           style={{ padding: "0 0 25px 50px", boxSizing: "border-box" }}
         >
-          Resumo
+          Resumo do Pedido
         </Typography>
+
+        <div
+          className="boxTotal"
+          
+        >
         <Grid container spacing={2}>
           <Grid item xs={12} className="order-detail">
             <div>
@@ -299,6 +309,8 @@ const Checkout = () => {
             </Link>
           </Grid>
         </Grid>
+</div>
+
       </Grid>
     </Grid>
   );
