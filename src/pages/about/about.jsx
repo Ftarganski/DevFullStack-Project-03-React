@@ -11,6 +11,7 @@ import {
   TextField,
 } from "@mui/material";
 
+
 const About = () => {
   return (
     <Grid
@@ -28,8 +29,13 @@ const About = () => {
         </Typography>
         <div className="boxTotal">
           <Grid container spacing={2}>
-            <Grid item>1111</Grid>
-            <Grid item>2222</Grid>
+          <Grid item>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptatem et laboriosam in deserunt, eius aliquid fugiat, repellat repellendus doloribus vero maxime voluptates odit, quasi corporis porro odio amet unde.</Grid>
+            <Grid item>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed error ipsam ipsum itaque aliquid rem sapiente cupiditate sint doloremque, nisi, quidem provident voluptates consequatur ex iste, nostrum debitis tenetur! Laborum.</Grid>
+            <Grid item>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptatem et laboriosam in deserunt, eius aliquid fugiat, repellat repellendus doloribus vero maxime voluptates odit, quasi corporis porro odio amet unde.</Grid>
+            <Grid item>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed error ipsam ipsum itaque aliquid rem sapiente cupiditate sint doloremque, nisi, quidem provident voluptates consequatur ex iste, nostrum debitis tenetur! Laborum.</Grid>
+            <Grid item>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptatem et laboriosam in deserunt, eius aliquid fugiat, repellat repellendus doloribus vero maxime voluptates odit, quasi corporis porro odio amet unde.</Grid>
+            <Grid item>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed error ipsam ipsum itaque aliquid rem sapiente cupiditate sint doloremque, nisi, quidem provident voluptates consequatur ex iste, nostrum debitis tenetur! Laborum.</Grid>
+           
           </Grid>
         </div>
       </Grid>
@@ -44,9 +50,12 @@ const About = () => {
         </Typography>
         <div className="boxTotal">
           <Grid container spacing={2}>
-            <Grid item>1111</Grid>
-            <Grid item>2222</Grid>
-          </Grid>
+            <Grid item>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum voluptatem et laboriosam in deserunt, eius aliquid fugiat, repellat repellendus doloribus vero maxime voluptates odit, quasi corporis porro odio amet unde.</Grid>
+            <Grid item>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed error ipsam ipsum itaque aliquid rem sapiente cupiditate sint doloremque, nisi, quidem provident voluptates consequatur ex iste, nostrum debitis tenetur! Laborum.</Grid>
+            <Grid item>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed error ipsam ipsum itaque aliquid rem sapiente cupiditate sint doloremque, nisi, quidem provident voluptates consequatur ex iste, nostrum debitis tenetur! Laborum.</Grid>
+            <Grid item>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed error ipsam ipsum itaque aliquid rem sapiente cupiditate sint doloremque, nisi, quidem provident voluptates consequatur ex iste, nostrum debitis tenetur! Laborum.</Grid>
+            <Grid item>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed error ipsam ipsum itaque aliquid rem sapiente cupiditate sint doloremque, nisi, quidem provident voluptates consequatur ex iste, nostrum debitis tenetur! Laborum.</Grid>
+           </Grid>
         </div>
       </Grid>
     </Grid>

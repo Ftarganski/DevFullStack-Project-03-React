@@ -4,6 +4,7 @@ const userIsLoggedIn = () => {
   } 
 };
 
+
 const login = (email, password) => {
   return 'login';
 };

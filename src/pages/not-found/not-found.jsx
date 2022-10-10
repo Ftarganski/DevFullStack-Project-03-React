@@ -3,6 +3,7 @@ import "./not-found.css";
 import { Grid, Typography } from "@mui/material";
 import ImageNotFound from "../../assets/img/not-found.png";
 
+
 const NotFound = () => {
   return (
     <Grid
