@@ -1,14 +1,14 @@
-h1, h2, h3, h4, h5, h6{
-  font-family: "Josefin Sans", sans-serif!important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Josefin Sans", sans-serif !important;
 }
 
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
 
 a {
@@ -16,33 +16,64 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 @media screen and (max-width: 900px) {
-  .logoBottom {
+  .footerLogo {
     display: none !important;
   }
   .menuBottom {
     flex-direction: row !important;
     align-items: center;
   }
+}
 
+.footer {
+  height: 150px;
+  width: 100vw!important;
+  background-color: #000;
+  margin-top: 30px !important;
+  padding: 0px;
+  margin-left: 0px !important;
+}
 
+.footerLinks {
+  color: #fff;
+  padding: 0px !important;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerSocial {
+  color: #fff;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0px !important;
 }
 
 .menuBottom {
   width: 100%;
   height: 90%;
   list-style: none;
-  padding: 0;
+  padding: 0 !important;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+}
+
+.button {
+  padding: 0px !important;
+  margin: 0px !important;
 }
 
 .App-header {

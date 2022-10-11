@@ -1,6 +1,6 @@
 import React from "react";
 import "./cart.css";
-import { products } from "../catalog/products";
+import { products } from "../catalog/products_cart";
 import { calculateTotal, calculatePromo } from "../../services/calculate";
 import { Link } from "react-router-dom";
 import {
@@ -179,7 +179,7 @@ className="boxTotal"
         </div>
       </Grid>
 
-      <Grid item xs={12} md={12} lg={4} sx={{ padding: "20px!import" }}>
+      <Grid item xs={12} md={12} lg={4} sx={{ padding: "20px!important" }}>
         <Typography
           variant="h4"
           component="h4"
@@ -260,6 +260,7 @@ className="boxTotal"
             </Button>
           </Link>
         </div>
+
       </Grid>
     </Grid>
   );

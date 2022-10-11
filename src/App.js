@@ -1,5 +1,5 @@
 import "./App.css";
-import { lazy, Suspense, useEffect, useState } from "react";
+import { lazy, Suspense, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import {
   AppBar,
@@ -123,7 +123,7 @@ function App() {
           </Toolbar>
         </AppBar>
 
-        <Suspense fallback={"Carregando..."}>
+        <Suspense fallback={"Carregando..."} sx={{ margin:"0px!important" }}>
           <Routes>
             <Route exact path="/" element={<Catalog />} />
             <Route exact path="/catalog" element={<Catalog />} />
@@ -137,24 +137,8 @@ function App() {
           </Routes>
         </Suspense>
 
-        <Grid
-          container
-          spacing={2}
-          sx={{ height: "150px", backgroundColor: "#000", marginTop: "30px" }}
-        >
-          <Grid
-            item
-            xs={12}
-            md={3}
-            lg={3}
-            sx={{
-              color: "#fff",
-              padding: "0 !important",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
-          >
+        <Grid container spacing={2} className="footer">
+          <Grid item xs={12} md={3} lg={3} className="footerLinks">
             <ul className="menuBottom">
               <Link to="/">
                 <li>Home</li>
@@ -171,36 +155,24 @@ function App() {
             </ul>
           </Grid>
 
-          <Grid
-            item
-            xs={12}
-            md={6}
-            lg={6}
-            sx={{
-              color: "#fff",
-              padding: "0 !important",
-              display: "flex",
-              alignItems: "center",
-              flexDirection: "row",
-              justifyContent: "space-evenly",
-            }}
-          >
-            <IconButton edge="end">
-              <Link to="/cart">
+          <Grid item xs={12} md={6} lg={6} className="footerSocial">
+            <IconButton edge="end" className="button">
+              <Link onClick={() => window.open('https://www.strava.com/clubs/pedalfloripamtb', '_blank')}>
                 <div>
                   <img
                     src={Strava}
                     alt=""
                     style={{
-                      height: "1em",
+                      height: "1em"
+                      
                     }}
                   />
                 </div>
               </Link>
             </IconButton>
 
-            <IconButton edge="end">
-              <Link to="/cart">
+            <IconButton edge="end"  className="button">
+            <Link onClick={() => window.open('https://www.instagram.com/pedalfloripamtb/', '_blank')}>
                 <InstagramIcon
                   style={{
                     color: "#fff",
@@ -209,8 +181,8 @@ function App() {
               </Link>
             </IconButton>
 
-            <IconButton edge="end">
-              <Link to="/cart">
+            <IconButton edge="end" className="button">
+            <Link onClick={() => window.open('https://www.youtube.com/c/PedalFloripaMTB?sub_confirmation=1', '_blank')}>
                 <YouTubeIcon
                   style={{
                     color: "#fff",
@@ -219,8 +191,8 @@ function App() {
               </Link>
             </IconButton>
 
-            <IconButton edge="end">
-              <Link to="/cart">
+            <IconButton edge="end" className="button">
+            <Link onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988222992', '_blank')}>
                 <WhatsAppIcon
                   style={{
                     color: "#fff",
@@ -230,19 +202,7 @@ function App() {
             </IconButton>
           </Grid>
 
-          <Grid
-            item
-            className="logoBottom"
-            xs={12}
-            md={3}
-            lg={3}
-            sx={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              padding: "0 !important",
-            }}
-          >
+          <Grid item xs={12} md={3} lg={3} className="footerLogo">
             <span
               style={{
                 height: "100px",

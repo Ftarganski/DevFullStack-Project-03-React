@@ -6,7 +6,7 @@ body {
 }
 
 .product {
-  margin-top: 32px;
+  margin-top: 32px!important;
   box-sizing: border-box;
   padding: 0;
 }

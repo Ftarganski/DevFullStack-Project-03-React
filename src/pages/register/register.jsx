@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../../assets/css/auth.css";
 import cover from "../../assets/img/login.jpg";
 import logo from "../../assets/img/logo.jpg";
 import { Link } from "react-router-dom";
@@ -26,49 +27,15 @@ const Register = () => {
   };
 
   return (
-    <Grid container spacing={2} styla={{ height: "100vh"}}>
-      <Grid
-        className="leftSide"
-        item
-        sx={0}
-        xs={0}
-        md={7}
-        lg={8}
-        style={{
-          marginTop: "25px",
-        }}
-      >
-        <Stack
-          spacing={2}
-          style={{
-            height: "100%",
-            justifyContent: "center",
-            alignItem: "center",
-          }}
-        >
-          <img src={cover} style={{ width: "100%" }} alt="Logo" />
+    <Grid container spacing={2} className="authTotal">
+      <Grid item className="leftSide" xs={0} md={8} lg={8}>
+        <Stack spacing={2} className="stackImage">
+          <img src={cover} alt="Logo" />
         </Stack>
       </Grid>
-      <Grid
-        item
-        xs={12}
-        md={5}
-        lg={4}
-        style={{
-          marginTop: "25px",
-        }}
-      >
-        <Stack
-          spacing={2}
-          style={{
-            height: "100%",
-            justifyContent: "center",
-            alignItems: "center",
-            paddingRight: 16,
-            paddingLeft: 16,
-            boxSizing: "border-box",
-          }}
-        >
+
+      <Grid item className="rigthSide" xs={12} md={4} lg={4}>
+        <Stack spacing={2} className="formRigth">
           <img src={logo} style={{ width: "120px" }} alt="Logo" />
           <h1>Bora pedalar conosco!</h1>
           <Grid container>
@@ -80,6 +47,7 @@ const Register = () => {
                 variant="outlined"
               />
             </Grid>
+
             <Grid item xs={12} sx={{ marginBottom: "16px" }}>
               <TextField
                 fullWidth="true"
@@ -120,7 +88,7 @@ const Register = () => {
               />
             </Grid>
 
-            <Grid item xs={12} sx={{ marginTop: "16px" }}>
+            <Grid item xs={12} sx={{ marginTop: "16px"}}>
               <Button
                 fullWidth="true"
                 variant="contained"
@@ -130,7 +98,7 @@ const Register = () => {
               </Button>
             </Grid>
 
-            <Grid item xs={12} sx={{ marginTop: "16px", marginBottom: "16px" }}>
+            <Grid item xs={12} sx={{ marginTop: "16px", marginBottom: "16px"}}>
               <Link to="/login">
                 <Button
                   fullWidth="true"

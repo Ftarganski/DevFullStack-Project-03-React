@@ -27,48 +27,19 @@ const Login = () => {
   };
 
   return (
-    <Grid container spacing={2} style={{ height: "100vh" }}>
-      <Grid classname="leftSide" item sx={0} xs={0} md={7} lg={8}>
-        <Stack
-          spacing={2}
-          style={{
-            height: "100%",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <img src={cover} style={{ width: "100%" }} alt="Logo" />
+    <Grid container spacing={2} className="authTotal">
+      <Grid item className="leftSide" xs={0} md={8} lg={8}>
+        <Stack spacing={2} className="stackImage">
+          <img src={cover} alt="Logo" />
         </Stack>
       </Grid>
-      <Grid item xs={12} md={5} lg={4}>
-        <Stack
-          spacing={2}
-          style={{
-            height: "100%",
-            justifyContent: "center",
-            alignItems: "center",
-            paddingLeft: 16,
-            paddindRigth: 16,
-            boxSizing: "borde-box",
-          }}
-        >
-          <img
-            src={logo}
-            style={{
-              width: "150px",
-            }}
-            alt="Logo"
-          />
 
+      <Grid item className="rigthSide" xs={12} md={4} lg={4}>
+        <Stack spacing={2} className="formRigth">
+          <img src={logo} style={{ width: "120px" }} alt="Logo" />
           <h1>Partiu pedal?</h1>
           <Grid container>
-            <Grid
-              item
-              xs={12}
-              sx={{
-                marginBottom: "16px",
-              }}
-            >
+            <Grid item xs={12} sx={{ marginBottom: "16px" }}>
               <TextField
                 fullWidth="true"
                 label="E-mail"
@@ -76,13 +47,8 @@ const Login = () => {
                 variant="outlined"
               />
             </Grid>
-            <Grid
-              item
-              xs={12}
-              sx={{
-                marginBottom: "16px",
-              }}
-            >
+
+            <Grid item xs={12} sx={{ marginBottom: "16px" }}>
               <FormControl sx={{ width: "100%" }}>
                 <InputLabel>Senha</InputLabel>
                 <OutlinedInput
@@ -105,13 +71,7 @@ const Login = () => {
               </FormControl>
             </Grid>
 
-            <Grid
-              item
-              xs={12}
-              sx={{
-                marginBottom: "16px",
-              }}
-            >
+            <Grid item xs={12} sx={{ marginBottom: "16px" }}>
               <Button
                 fullWidth="true"
                 variant="contained"
