@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../assets/css/auth.css";
 import cover from "../../assets/img/login.jpg";
-import logo from "../../assets/img/logo.jpg";
+import logo from "../../assets/img/logo_preto.png";
 import {
   Grid,
   Stack,
@@ -36,11 +36,16 @@ const Login = () => {
 
       <Grid item className="rigthSide" xs={12} md={4} lg={4}>
         <Stack spacing={2} className="formRigth">
+        <span style={{ width: "120px"}}>
+          <Link to="/">
           <img src={logo} style={{ width: "120px" }} alt="Logo" />
+          </Link>
+          </span>
           <h1>Partiu pedal?</h1>
           <Grid container>
             <Grid item xs={12} sx={{ marginBottom: "16px" }}>
               <TextField
+              style={{backgroundColor:"white", borderRadius: "5px"}}
                 fullWidth="true"
                 label="E-mail"
                 type="email"
@@ -52,6 +57,7 @@ const Login = () => {
               <FormControl sx={{ width: "100%" }}>
                 <InputLabel>Senha</InputLabel>
                 <OutlinedInput
+                style={{backgroundColor:"white", borderRadius: "5px"}}
                   color="primary"
                   fullWidth="true"
                   label="Senha"

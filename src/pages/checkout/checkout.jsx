@@ -33,7 +33,7 @@ const Checkout = () => {
     <Grid
       container
       spacing={2}
-      className-="checkoutTotal"
+      sx={{ padding: "40px", boxSizing: "border-box" }}
       >
       <Grid item xs={12} md={12} lg={8} sx={{ padding: "20px!important" }}>
         <Typography

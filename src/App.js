@@ -123,7 +123,7 @@ function App() {
           </Toolbar>
         </AppBar>
 
-        <Suspense fallback={"Carregando..."} sx={{ margin:"0px!important" }}>
+        <Suspense fallback={"Carregando..."} sx={{ margin: "0px!important" }}>
           <Routes>
             <Route exact path="/" element={<Catalog />} />
             <Route exact path="/catalog" element={<Catalog />} />
@@ -157,22 +157,35 @@ function App() {
 
           <Grid item xs={12} md={6} lg={6} className="footerSocial">
             <IconButton edge="end" className="button">
-              <Link onClick={() => window.open('https://www.strava.com/clubs/pedalfloripamtb', '_blank')}>
+              <Link
+                onClick={() =>
+                  window.open(
+                    "https://www.strava.com/clubs/pedalfloripamtb",
+                    "_blank"
+                  )
+                }
+              >
                 <div>
                   <img
                     src={Strava}
                     alt=""
                     style={{
-                      height: "1em"
-                      
+                      height: "1em",
                     }}
                   />
                 </div>
               </Link>
             </IconButton>
 
-            <IconButton edge="end"  className="button">
-            <Link onClick={() => window.open('https://www.instagram.com/pedalfloripamtb/', '_blank')}>
+            <IconButton edge="end" className="button">
+              <Link
+                onClick={() =>
+                  window.open(
+                    "https://www.instagram.com/pedalfloripamtb/",
+                    "_blank"
+                  )
+                }
+              >
                 <InstagramIcon
                   style={{
                     color: "#fff",
@@ -182,7 +195,14 @@ function App() {
             </IconButton>
 
             <IconButton edge="end" className="button">
-            <Link onClick={() => window.open('https://www.youtube.com/c/PedalFloripaMTB?sub_confirmation=1', '_blank')}>
+              <Link
+                onClick={() =>
+                  window.open(
+                    "https://www.youtube.com/c/PedalFloripaMTB?sub_confirmation=1",
+                    "_blank"
+                  )
+                }
+              >
                 <YouTubeIcon
                   style={{
                     color: "#fff",
@@ -192,7 +212,14 @@ function App() {
             </IconButton>
 
             <IconButton edge="end" className="button">
-            <Link onClick={() => window.open('https://api.whatsapp.com/send?phone=5548988222992', '_blank')}>
+              <Link
+                onClick={() =>
+                  window.open(
+                    "https://api.whatsapp.com/send?phone=5548988222992",
+                    "_blank"
+                  )
+                }
+              >
                 <WhatsAppIcon
                   style={{
                     color: "#fff",
@@ -209,13 +236,7 @@ function App() {
               }}
             >
               <Link to="/">
-                <img
-                  src={Logo}
-                  alt=""
-                  style={{
-                    height: "100%",
-                  }}
-                />
+                <img src={Logo} alt="" style={{ height: "100%" }} />
               </Link>
             </span>
           </Grid>

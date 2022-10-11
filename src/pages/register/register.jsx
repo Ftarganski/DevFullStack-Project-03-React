@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../../assets/css/auth.css";
 import cover from "../../assets/img/login.jpg";
-import logo from "../../assets/img/logo.jpg";
+import logo from "../../assets/img/logo_preto.png";
 import { Link } from "react-router-dom";
 import {
   Grid,
@@ -30,17 +30,28 @@ const Register = () => {
     <Grid container spacing={2} className="authTotal">
       <Grid item className="leftSide" xs={0} md={8} lg={8}>
         <Stack spacing={2} className="stackImage">
+          
+        
+          
           <img src={cover} alt="Logo" />
+          
         </Stack>
       </Grid>
 
       <Grid item className="rigthSide" xs={12} md={4} lg={4}>
         <Stack spacing={2} className="formRigth">
+
+        <span style={{ width: "120px"}}>
+          <Link to="/">
           <img src={logo} style={{ width: "120px" }} alt="Logo" />
+          </Link>
+          </span>
+
+
           <h1>Bora pedalar conosco!</h1>
           <Grid container>
             <Grid item xs={12} sx={{ marginBottom: "16px" }}>
-              <TextField
+              <TextField style={{backgroundColor:"white", borderRadius: "5px"}}
                 fullWidth="true"
                 label="Usuário"
                 type="text"
@@ -50,6 +61,7 @@ const Register = () => {
 
             <Grid item xs={12} sx={{ marginBottom: "16px" }}>
               <TextField
+              style={{backgroundColor:"white", borderRadius: "5px"}}
                 fullWidth="true"
                 label="E-mail"
                 type="email"
@@ -59,9 +71,9 @@ const Register = () => {
             <Grid item xs={12} sx={{ marginBottom: "16px" }}>
               <FormControl sx={{ width: "100%" }}>
                 <InputLabel>Senha</InputLabel>
-                <OutlinedInput
+                <OutlinedInput style={{backgroundColor:"white", borderRadius: "5px"}}
                   color="primary"
-                  fulWidth="true"
+                  fullWidth="true"
                   label="Senha"
                   type={visibilityToggle ? "text" : "password"}
                   endAdornment={
@@ -79,7 +91,7 @@ const Register = () => {
               </FormControl>
             </Grid>
             <Grid item xs={12} sx={{ margimBottom: "16px" }}>
-              <TextField
+              <TextField style={{backgroundColor:"white", borderRadius: "5px"}}
                 color="primary"
                 fullWidth="true"
                 label="Confirmar"
