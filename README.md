@@ -18,8 +18,8 @@ Proposta de desenvolvimento:
 Tendo como base o trabalho elaborado na disciplinas de HTML, CSS e JavaScript (um catálogo web com o tema de ciclismo) o projeto atual buscou aplicar neste modelo de catálogo a linguagem React com a utilização do framework Material UI, buscando a dinamiza~]ao de todo o HMTL e CSS com ligação ao backend via API.
 
 No desenvolvimento do projeto foram aplicadas conceitos como:
-* React
-* Material UI
+* React JS
+* Framework Material UI
 * JSON
 * Classes
 * Atributos
@@ -28,5 +28,5 @@ No desenvolvimento do projeto foram aplicadas conceitos como:
 * Laços de repetição
 * Responsividade
 * Modais dinâmicos
-* Framework Slick Slider
+* Framework Nuka Carousel
 
