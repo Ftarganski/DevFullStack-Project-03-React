@@ -15,9 +15,9 @@ Demanda do projeto:
 O projeto web consiste em criar uma loja virtual através da utilização da linguagem React em com apoio do framework Material UI.
 
 Proposta de desenvolvimento:
-Tendo como base o trabalho elaborado na disciplinas de HTML, CSS e JavaScript (um catálogo web com o tema de ciclismo) o projeto atual buscou aplicar neste modelo de catálogo a linguagem React com a utilização do framework Material UI, buscando a dinamiza~]ao de todo o HMTL e CSS com ligação ao backend via API.
+Tendo como base o trabalho elaborado na disciplinas de HTML, CSS e JavaScript (um catálogo web com o tema de ciclismo) o projeto atual buscou aplicar neste modelo de catálogo a linguagem React com a utilização do framework Material UI, buscando a dinamização de todo o HMTL e CSS com ligação ao backend via API.
 
-No desenvolvimento do projeto foram aplicadas conceitos como:
+No desenvolvimento do projeto foram aplicados conceitos como:
 * React JS
 * Framework Material UI
 * JSON
