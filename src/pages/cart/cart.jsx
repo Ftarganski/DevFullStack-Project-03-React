@@ -43,34 +43,31 @@ const Cart = () => {
         >
           Carrinho de Compras
         </Typography>
-        <div
 
-className="boxTotal"
-          
-        >
-          <List sx={{ width: "100%" }}>
+
+        <div className="boxTotal">
+         
+         
+         <List sx={{ width: "100%" }}>
+            
             {Object.keys(products).map((id) => {
               return (
-                <ListItem
-                  sx={{ alignItems: "center" }}
+
+                <ListItem sx={{ alignItems: "center" }} className="listCart"
                   secondaryAction={
-                    <IconButton
-                      sx={{ right: "16px" }}
-                      edge="end"
-                      aria-label="delete"
-                    >
+                    <IconButton sx={{ right: "16px" }} edge="end" aria-label="delete">
                       <DeleteIcon />
-                    </IconButton>
-                  }
-                  alignItems="flex-start"
-                >
+                    </IconButton>} alignItems="flex-start">
+
+
                   <Stack sx={{ flexGrow: 1 }} className="stackImage">
                     <span>
                       <img src={products[id].images[0]} alt="" />
                     </span>
                   </Stack>
 
-                  <Stack sx={{ flexGrow: 2 }} direction="row">
+                  <Stack sx={{ flexGrow: 2 }} className="stackPrice">
+                   
                     <Stack
                       direction="column"
                       sx={{
@@ -90,7 +87,8 @@ className="boxTotal"
                         variant="h6"
                       >
                         {products[id].name}
-                      </Typography>
+                      </Typography> 
+
                       <Typography
                         sx={{
                           display: "inline",
@@ -103,6 +101,7 @@ className="boxTotal"
                         {products[id].description.substr(0, 75)}...
                       </Typography>
                     </Stack>
+
                     <Stack
                       direction="row"
                       sx={{
@@ -171,12 +170,24 @@ className="boxTotal"
                         value={products[id].quantity}
                       />
                     </Stack>
+
+
+                    
+
                   </Stack>
+
+
                 </ListItem>
               );
             })}
+
+
           </List>
+
+
         </div>
+      
+      
       </Grid>
 
       <Grid item xs={12} md={12} lg={4} sx={{ padding: "20px!important" }}>
