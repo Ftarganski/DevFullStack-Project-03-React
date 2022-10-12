@@ -50,17 +50,17 @@ const Product = () => {
           ></div>
         </Stack>
         <Stack direction="row" className="imageSide__images">
-          {products[params.id].images.map((image, idx) => (
+         <div> {products[params.id].images.map((image, idx) => (
             <img
               onClick={() => setImageToView(idx)}
-              width="auto"
-              height="104px"
               src={image}
               alt=""
             />
           ))}
+          </div>
         </Stack>
       </Grid>
+
       <Grid item xs={12} sm={7} className="productItem">
         <Typography variant="h4" component="h1" className="productItem__title">
           {products[params.id].name}

@@ -34,6 +34,17 @@ body {
   cursor: pointer;
 }
 
+.imageSide__images{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.imageSide__images > div > img{
+  width: 33%;
+  height: auto;
+}
+
 .productItem {
   padding: 0 40px 0 40px!important;
   box-sizing: border-box;
@@ -103,3 +114,20 @@ body {
     margin: 0 auto;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .imageSide {
+    padding: 0 40px!important;
+  }
+
+  .productItem{
+    padding-top: 40px!important;
+     }
+
+  .productItem__quantity{
+    display: flex!important;
+    justify-content: center!important;
+  }
+}
+
+
