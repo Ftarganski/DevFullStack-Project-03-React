@@ -19,20 +19,20 @@ const NotFound = () => {
     >
       <Grid item xs={12} md={12} lg={12} sx={{ padding: "20px !important", textAlign: "center" }}>
         <Typography variant="h1" component="h2">
-          Ooooooops!!!
+          Oooops!!!!
         </Typography>
       </Grid>
 
       <Grid item xs={12} md={12} lg={12} sx={{ padding: "20px !important", textAlign: "center"  }}>
-        <Typography variant="h2" component="h2">
+        <spam style={{width: "50%"}}>
           <img
             src={ImageNotFound}
             alt=""
             style={{
-              height: "50vh",
+              width: "50%",
             }}
           />
-        </Typography>
+        </spam>
       </Grid>
 
       <Grid item xs={12} md={12} lg={12} sx={{ padding: "20px !important", textAlign: "center"  }}>
