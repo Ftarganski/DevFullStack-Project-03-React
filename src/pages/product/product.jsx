@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { products, categories } from "../catalog/products";
 import {
   Grid,
@@ -39,7 +39,7 @@ const Product = () => {
   };
 
   return (
-    <Grid container spacing={2} className="product" >
+    <Grid container spacing={2} className="product">
       <Grid item xs={12} sm={5} className="imageSide">
         <Stack className="imageSide__image">
           <div
@@ -50,13 +50,11 @@ const Product = () => {
           ></div>
         </Stack>
         <Stack direction="row" className="imageSide__images">
-         <div> {products[params.id].images.map((image, idx) => (
-            <img
-              onClick={() => setImageToView(idx)}
-              src={image}
-              alt=""
-            />
-          ))}
+          <div>
+            {" "}
+            {products[params.id].images.map((image, idx) => (
+              <img onClick={() => setImageToView(idx)} src={image} alt="" />
+            ))}
           </div>
         </Stack>
       </Grid>
@@ -129,15 +127,16 @@ const Product = () => {
             <AddIcon color="primary" />
           </IconButton>
         </div>
-
-        <Button
-          variant="contained"
-          size="large"
-          endIcon={<ShoppingCartIcon />}
-          className="productItem__buy"
-        >
-          Comprar
-        </Button>
+        <Link to={"../cart/"}>
+          <Button
+            variant="contained"
+            size="large"
+            endIcon={<ShoppingCartIcon />}
+            className="productItem__buy"
+          >
+            Comprar
+          </Button>
+        </Link>
       </Grid>
     </Grid>
   );
