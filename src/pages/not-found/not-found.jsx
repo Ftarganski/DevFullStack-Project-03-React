@@ -18,7 +18,7 @@ const NotFound = () => {
       }}
     >
       <Grid item xs={12} md={12} lg={12} sx={{ padding: "20px !important", textAlign: "center" }}>
-        <Typography variant="h1" component="h2">
+        <Typography variant="h2" component="h2">
           Oooops!!!!
         </Typography>
       </Grid>
@@ -36,7 +36,7 @@ const NotFound = () => {
       </Grid>
 
       <Grid item xs={12} md={12} lg={12} sx={{ padding: "20px !important", textAlign: "center"  }}>
-        <Typography variant="h3" component="h2">
+        <Typography variant="h4" component="h4">
           Você pedalou para fora da trilha!
         </Typography>
       </Grid>

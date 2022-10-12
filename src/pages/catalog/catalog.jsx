@@ -18,7 +18,7 @@ const Catalog = () => {
           md={12}
           lg={12}
           adaptiveHeight="true"
-          autoplay="true"
+          autoplay="false"
           autoplayInterval="3000"
           wrapAround="true"
           className="carousel"
