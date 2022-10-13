@@ -7,12 +7,16 @@ Disciplina: React JS
 Professor: Tiago Luiz Ribeiro da Silva
 Aluno: Francis Targanski
 
-Projeto Final da disciplina JavaScript do curso de
+Projeto Final da disciplina React JS do curso de
 Desenvolvedor Web Full Stack do programa de Pósgraduações em Tecnologia, Inovação e Negócios Digitais
+
+*****
 
 Demanda do projeto:
 
 O projeto web consiste em criar uma loja virtual através da utilização da linguagem React JS em com apoio do framework Material UI.
+
+*****
 
 Proposta de desenvolvimento:
 
