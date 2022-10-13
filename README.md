@@ -35,4 +35,3 @@ No desenvolvimento do projeto foram aplicados conceitos como:
 * Responsividade
 * Modais dinâmicos
 * Framework Nuka Carousel
-
