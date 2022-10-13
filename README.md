@@ -1,4 +1,4 @@
-# Dev. Full Stack - Projeto 03 - React
+# Dev. Full Stack - Projeto 03 - React JS
 
 Pós-graduações em Tecnologia,
 Inovação e Negócios Digitais
